@@ -1,0 +1,425 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>대한민국 최고의 뮤지컬 전용 극장 :: 샤롯데씨어터 ::</title>
+    <link href="css/main.css" rel="stylesheet">
+    <script src="js/jquery-3.4.1.min.js"></script>
+    <script src="js/jquery-ui.min.js"></script>
+    <script src="js/jQuery.js"></script>
+    <script src="js/main.js"></script>
+</head>
+
+<body>
+    <!--페이지 공통-->
+    <div class="fixed_wrap">
+        <!--샤롯데씨어터-->
+        <a class="charlotte_text">CHARLOTTE</a>
+        <!-- 헤더영역 시작 -->
+        <header class="header_wrap">
+            <h1 class="header_logo">
+                <a href="/">
+                    <img src="images/logo_white.png" alt="로고" class="white">
+                    <img src="images/logo_black.png" alt="로고" class="black">
+                </a>
+            </h1>
+            <ul class="gnb_wrap">
+                <li>
+                    <a href="#">
+                        로그인
+                    </a>
+                </li>
+                <!--<li><a href="#">로그아웃</a></li>-->
+                <li>
+                    <a href="#">
+                        회원가입
+                    </a>
+                </li>
+                <!--<li><a href="#">마이페이지</a></li>-->
+                <li>
+                    <a href="#">
+                        <img src="images/icon_share_white.png" alt="공유" class="white">
+                        <img src="images/icon_share_black.png" alt="공유" class="black">
+                    </a>
+                    <ul class="gnb_sns_on">
+                        <li>
+                            <a href="#">
+                                <img src="images/icon_i_white.png" alt="인스타그램바로가기" class="white">
+                                <img src="images/icon_i_black.png" alt="인스타그램바로가기" class="black">
+                            </a>
+                            <span></span>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <img src="images/icon_f_white.png" alt="페이스북바로가기" class="white">
+                                <img src="images/icon_f_black.png" alt="페이스북바로가기" class="black">
+                            </a>
+                            <span></span>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <img src="images/icon_t_white.png" alt="트위터바로가기" class="white">
+                                <img src="images/icon_t_black.png" alt="트위터바로가기" class="black">
+                            </a>
+                            <span></span>
+                        </li>
+                    </ul>
+                </li>
+                <li class="header_menu_icon">
+                    <a href="#">
+                        <img src="images/icon_bar_white.png" alt="햄버거메뉴" class="white">
+                        <img src="images/icon_bar_black.png" alt="햄버거메뉴" class="black">
+                    </a>
+                </li>
+            </ul>
+        </header>
+        <!-- 사이드 바 시작 -->
+        <aside class="indicator_wrap">
+            <ul class="indicator_area">
+                <li class="on">
+                    <a href="#page1">
+                        <span class="indicator_circle"></span>
+                        <span class="indicator_none">샤롯데씨어터</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#page2">
+                        <span class="indicator_circle"></span>
+                        <span class="indicator_none">현재공연</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#page3">
+                        <span class="indicator_circle"></span>
+                        <span class="indicator_none">예정공연</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#page4">
+                        <span class="indicator_circle"></span>
+                        <span class="indicator_none">관람안내</span>
+                    </a>
+                </li>
+            </ul>
+        </aside>
+        <!-- 하단 스크롤 버튼 -->
+        <div class="scroll_wrap">
+            <a href="#" class="scroll_text">
+                <p>SCROLL DOWN</p>
+                <img src="images/icon_pgdown_white.png" alt="스크롤다다운" class="scroll_img white">
+                <img src="images/icon_pgdown_black.png" alt="스크롤다다운" class="scroll_img black">
+            </a>
+        </div>
+        <!--top 버튼 -->
+        <a href="#" class="top_btn">
+            <img src="images/icon_top_white.png" alt="위로가기" class="white">
+            <img src="images/icon_top_black.png" alt="위로가기" class="black">
+            <p>TOP</p>
+        </a>
+        <!--4. 햄버거 메뉴 활성화 -->
+        <div class="page menu">
+            <span class="ir">메뉴</span>
+            <section class="inbox clb">
+                <ul class="menu_wrap">
+                    <li>
+                        <a href="#">
+                            Visit
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            Musical
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            Tickets
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            Contact
+                        </a>
+                    </li>
+                </ul>
+            </section>
+        </div>
+    </div>
+
+    <!--0. 메인페이지-->
+    <div class="page top pgnum" id="page1">
+        <!--슬라이드-->
+        <ul class="slide">
+            <li id="slide1">
+                <span class="ir">슬라이드1</span>
+            </li>
+            <li id="slide2">
+                <span class="ir">슬라이드2</span>
+            </li>
+            <li id="slide3">
+                <span class="ir">슬라이드3</span>
+            </li>
+        </ul>
+        <div class="inbox clb">
+            <a href="#" class="tkt_btn">예매하기<span></span></a>
+            <!-- 페이징 영역 시작 -->
+            <ol class="ban_wrap">
+                <li class="on">
+                    <a href="">01</a>
+                </li>
+                <li>
+                    <a href="#">02</a>
+                </li>
+                <li>
+                    <a href="#">03</a>
+                </li>
+            </ol>
+            <!-- 페이징 영역 끝 -->
+        </div>
+    </div>
+
+    <!--1. 현재공연-->
+    <div class="page cont1 pgnum" id="page2">
+        <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 1920 1080" style="enable-background:new 0 0 1920 1080;" xml:space="preserve">
+            <g>
+                <g>
+                </g>
+            </g>
+            <path class="st0" d="M1935.5,222.5h-417.02h-3.34c0.88,0.65,1.77,1.32,2.67,2c11.85,8.95,25.47,20.07,39.04,32.94
+	c34.14,32.38,74.83,82.69,74.83,138.51v1h0.32c-0.54,40.44-33.6,73.17-74.16,73.17c-40.9,0-74.17-33.27-74.17-74.17v-1h-2.33l0,1
+	c-0.17,40.72-33.44,73.84-74.16,73.84s-73.99-33.13-74.16-73.84l0-0.08l0-0.24c0.16-55.74,40.84-105.97,74.94-138.29
+	c13.53-12.82,27.11-23.9,38.93-32.83c0.9-0.68,1.79-1.35,2.67-2h-3.34H-20.5v2h1464.06c-11.36,8.67-24.19,19.24-36.96,31.35
+	c-21.87,20.72-39.3,41.82-51.83,62.71c-15.5,25.85-23.49,51.46-23.75,76.13l-0.03,0l0.02,1.02l1,0.06h0l-1,0.07l0,0.1l0,1.01h0.01
+	c0.71,41.36,34.67,74.84,76.15,74.84c38.04,0,69.76-28.16,75.3-64.73c5.39,36.75,37.13,65.05,75.36,65.05
+	c42,0,76.17-34.17,76.17-76.17v-1h-0.33c-0.21-24.69-8.16-50.31-23.63-76.17c-12.52-20.92-29.96-42.06-51.85-62.81
+	c-12.81-12.15-25.69-22.76-37.08-31.46h414.38V222.5z" />
+        </svg>
+        <section class="inbox clb">
+            <div class="cont_title_wrap">
+                <h2 class="cont_title">현재 공연</h2>
+                <p class="cont_title_sub">오직 샤롯데씨어터에서만 즐길 수 있는 화려한 뮤지컬을 만나보세요!</p>
+            </div>
+            <div class="main_content_wrap clb">
+                <div class="main_content_poster_wrap">
+                    <img src="images/42_poster.jpg" alt="브로드웨이 42번가" class="main_content_poster">
+                    <a href="https://youtu.be/wCK3c41TsjA" target="_blank">
+                        <img src="images/icon_youtube.png" alt="유튜브바로가기" class="main_content_ytb">
+                    </a>
+                </div>
+                <div class="main_content_text_wrap">
+                    <h3 class="main_content_title">[뮤지컬] 브로드웨이 42번가</h3>
+                    <q class="main_content_sub">수천 명의 코러스들을 위해서라도<br>
+                        너는 꼭 성공해야 해!</q>
+                    <p class="main_content_text">
+                        시골 출신의 페기는 뮤지컬 댄서가 되는 게 꿈이다.<br>
+                        두려움에 주춤거리다 오디션 시간에 늦어 좌절한 된 페기는<br>
+                        극장 밖에서 공연의 코러스 걸들 3명을 우연히 만나 자신의 끼를 선보이게 된다.<br>
+                        이를 본 연출가는 그녀의 재능을 보고 코러스 걸로 발탁한다.<br><br>
+
+                        그러나, 첫 공연날, 페기는 여주인공 도로시를 넘어뜨렸다는 오해를 받아 해고를 당한다.<br>
+                        하지만, 다리를 다친 도로시의 역할을 소화할 수 있는 사람은 페기 밖에 없다는 <br>
+                        단원들의 설득으로 연출가는 페기에게 주인공 배역을 맡긴다.
+                    </p>
+                    <div class="main_content_info_wrap clb">
+                        <p class="main_content_info_1">
+                            기간<br>
+                            장소<br>
+                            관람 연령<br>
+                            러닝 타임<br>
+                            출연<br>
+                            제작
+                        </p>
+                        <p class="main_content_info_2">
+                            2020.06.20 ~ 2020.08.23<br>
+                            샤롯데씨어터<br>
+                            8세 이상 관람가 (미취학 아동 입장 불가)<br>
+                            160분 (인터미션 20분 포함)<br>
+                            송일국, 이종혁, 양준모, 최정원, 정영주, 배해선 외<br>
+                            CJ ENM, ㈜샘컴퍼니, (주)롯데엔터테인먼트
+                        </p>
+                    </div>
+                </div>
+                <a href="#" class="main_content_btn">
+                    상세보기
+                    <span></span>
+                </a>
+            </div>
+        </section>
+    </div>
+
+    <!--1-1. 예정공연-->
+    <div class="page cont1 pgnum" id="page3">
+       <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 1920 1080" style="enable-background:new 0 0 1920 1080;" xml:space="preserve">
+            <g>
+                <g>
+                </g>
+            </g>
+            <path class="st0" d="M1935.5,222.5h-417.02h-3.34c0.88,0.65,1.77,1.32,2.67,2c11.85,8.95,25.47,20.07,39.04,32.94
+	c34.14,32.38,74.83,82.69,74.83,138.51v1h0.32c-0.54,40.44-33.6,73.17-74.16,73.17c-40.9,0-74.17-33.27-74.17-74.17v-1h-2.33l0,1
+	c-0.17,40.72-33.44,73.84-74.16,73.84s-73.99-33.13-74.16-73.84l0-0.08l0-0.24c0.16-55.74,40.84-105.97,74.94-138.29
+	c13.53-12.82,27.11-23.9,38.93-32.83c0.9-0.68,1.79-1.35,2.67-2h-3.34H-20.5v2h1464.06c-11.36,8.67-24.19,19.24-36.96,31.35
+	c-21.87,20.72-39.3,41.82-51.83,62.71c-15.5,25.85-23.49,51.46-23.75,76.13l-0.03,0l0.02,1.02l1,0.06h0l-1,0.07l0,0.1l0,1.01h0.01
+	c0.71,41.36,34.67,74.84,76.15,74.84c38.04,0,69.76-28.16,75.3-64.73c5.39,36.75,37.13,65.05,75.36,65.05
+	c42,0,76.17-34.17,76.17-76.17v-1h-0.33c-0.21-24.69-8.16-50.31-23.63-76.17c-12.52-20.92-29.96-42.06-51.85-62.81
+	c-12.81-12.15-25.69-22.76-37.08-31.46h414.38V222.5z" />
+        </svg>
+        <section class="inbox clb">
+            <div class="cont_title_wrap">
+                <h2 class="cont_title">예정 공연</h2>
+                <p class="cont_title_sub">오직 샤롯데씨어터에서만 즐길 수 있는 화려한 뮤지컬을 만나보세요!</p>
+            </div>
+            <div class="main_content_wrap clb">
+                <div class="main_content_poster_wrap">
+                    <img src="images/happy_poster.jpg" alt="어쩌면해피엔딩" class="main_content_poster">
+                    <a href="https://youtu.be/7E1wbe20PXw" target="_blank">
+                        <img src="images/icon_youtube.png" alt="유튜브바로가기" class="main_content_ytb">
+                    </a>
+                </div>
+                <div class="main_content_text_wrap">
+                    <h3 class="main_content_title">[뮤지컬] 어쩌면 해피엔딩</h3>
+                    <q class="main_content_sub">우리가, 어쩌면,<br>
+                        해피엔딩일 수 있을까요?</q>
+                    <p class="main_content_text">
+                        멀지 않은 미래, 21세기 후반. 서울 메트로폴리탄<br>
+                        가까운 미래에 인간을 돕기 위해 만들어진 로봇인 '헬퍼봇' 올리버와 클레어.<br>
+                        이제는 구형이 되어 버려진 채 홀로 외롭게 살아간다.<br><br>
+
+                        우연히 서로를 마주하고 조금씩 가까워지는 둘.<br>
+                        반딧불을 찾아 예기치 않은 여행을 함께 하면서<br>
+                        인간의 복잡한 감정을 배우게 된다.<br><br>
+
+                        그러나 감정이 깊어질수록 그것이 가져오는 고통 또한 깨닫게 되는데...
+                    </p>
+                    <div class="main_content_info_wrap clb">
+                        <p class="main_content_info_1">
+                            기간<br>
+                            장소<br>
+                            관람 연령<br>
+                            러닝 타임<br>
+                            출연<br>
+                            제작
+                        </p>
+                        <p class="main_content_info_2">
+                            2020.09.20 ~ 2020.11.23<br>
+                            샤롯데씨어터<br>
+                            13세 이상 관람가<br>
+                            110분<br>
+                            정문성, 전성우, 양희준, 전미도, 강혜인, 한재아, 성종완, 이선근<br>
+                            CJ ENM, ㈜샘컴퍼니, (주)롯데엔터테인먼트
+                        </p>
+                    </div>
+                </div>
+                <a href="#" class="main_content_btn">
+                    상세보기
+                    <span></span>
+                </a>
+            </div>
+        </section>
+    </div>
+
+    <!--2. 관람 안내-->
+    <div class="page cont2 pgnum" id="page4">
+        <section class="inbox clb">
+            <div class="cont_title_wrap">
+                <h2 class="cont_title ct2">관람 안내</h2>
+                <p class="cont_title_sub theme_white">극장에서의 매너는 다수의 사람들과 맺어지는 무언의 약속입니다. 올바른 관객 문화는 여러분의 작은 실천으로 만들어집니다.</p>
+            </div>
+            <div class="main_info_wrap">
+                <div class="main_info_area">
+                    <div class="main_info_box">
+                        <h4 class="main_info_title">
+                            <img src="images/icon_call_white.png" alt="관람 문의">
+                            관람 문의
+                        </h4>
+                        <div class="main_info_sect">
+                            <ul class="main_info_list_1">
+                                <li>티켓예매 문의</li>
+                                <li>공연장 문의</li>
+                                <li>공연장 광고 문의</li>
+                            </ul>
+                            <ul class="main_info_list_2">
+                                <li>1899-6336</li>
+                                <li>1644-0078</li>
+                                <li>KIM_YG@lotte.net</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="main_info_box">
+                        <h4 class="main_info_title">
+                            <img src="images/icon_clock_white.png" alt="관람 시간">
+                            관람 시간
+                        </h4>
+                        <div class="main_info_sect">
+                            <ul class="main_info_list_1">
+                                <li>평일</li>
+                                <li>토요일</li>
+                                <li>일요일 및 공휴일</li>
+                            </ul>
+                            <ul class="main_info_list_2">
+                                <li>20시 00분 (월 공연 없음)</li>
+                                <li>14시 00분, 18시 30분</li>
+                                <li>14시 00분</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <ul class="warning_text">
+                    <li>예매 티켓 수령 및 현장 구매는 공연 시작 2시간 전부터 가능합니다.</li>
+                    <li>공연 당일 티켓 수령 시 예매번호 또는 예매자 본인 신분증&휴대폰 번호 뒷자리를 확인해주셔야 티켓 수령이 가능합니다.</li>
+                    <li>우편 발송 건을 포함하여 사전 발권 완료된 티켓은 재발권이 불가합니다. 티켓이 분실 및 웨손되지 않도록 유의하시기 바랍니다.</li>
+                    <li>취소 마감 시간 이후에는 예매 티켓의 취소, 환불, 변경 모두 불가합니다.
+                    </li>
+                    <li><br></li>
+                    <li>공연 중 사전 협의되지 않은 사진촬영, 영상 녹화, 음원 녹취는 절대 불가합니다.</li>
+                    <li>객석 입장 규정 미숙지로 인해 발생한 책임은 관람자 본인에게 있으며 예매 티켓의 취소, 변경, 환불은 불가합니다.</li>
+                </ul>
+            </div>
+        </section>
+    </div>
+
+    <!--3. 푸터영역 -->
+    <div class="cont4 pgnum">
+        <section class="inbox" id="cont4">
+            <div class="footer_left">
+                <ul class="footer_terms">
+                    <li><a href="#">회원약관</a></li>
+                    <li><a href="#">개인정보취급방침</a></li>
+                    <li><a href="#">오시는길</a></li>
+                </ul>
+                <br>
+                서울특별시 송파구 올림픽로 240 (잠실동) 샤롯데씨어터 | 대표이사 기원규 | 사업자등록번호 215-85-39690<br>
+                티켓예매문의 : 1670-5650 | 공연장(시설 및 운영) 문의 : 1644-0078 | 공연장 광고 문의 : <a href="mailto:KIM_YG@lotte.net">KIM_YG@lotte.net</a>
+                <br><br>
+                <p>Copyrightⓒ LOTTECINEMA All rights Reserved.</p>
+            </div>
+            <div class="footer_right">
+                <img src="images/logo_black.png" alt="샤롯데씨어터">
+                <ul class="footer_sns">
+                    <li>
+                        <a href="#">
+                            <img src="images/icon_i_black.png" alt="인스타그램바로가기">
+                            <span></span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <img src="images/icon_f_black.png" alt="페이스북바로가기">
+                            <span></span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <img src="images/icon_t_black.png" alt="트위터바로가기">
+                            <span></span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </section>
+    </div>
+
+</body>
+
+</html>

@@ -1,0 +1,408 @@
+@charset "utf-8";
+/* main.css - 메인페이지 css */
+
+/* 파일 merging(합치기) */
+@import url(reset.css);
+@import url(core.css);
+@import url(common.css);
+
+/*****************************************************************/
+
+/*겉박스*/
+.page {
+    width: 100%;
+    height: 100%;
+    /*    outline: 2px dotted red;*/
+}
+
+/*속박스*/
+.inbox {
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 1200px;
+    height: 100%;
+    max-width: 100%;
+    margin: 0 auto;
+    /*    outline: 2px dotted blue;*/
+}
+
+body {
+    position: relative;
+}
+
+/*****************************************************************/
+
+/*0. 메인페이지*/
+.top {
+    position: relative;
+    /*부모자격*/
+    overflow: hidden;
+}
+
+/*슬라이드*/
+.slide {
+    position: absolute;
+    left: 0;
+    width: 300%;
+    height: 100%;
+}
+
+.slide li {
+    width: 33.333%;
+    height: 100%;
+}
+
+#slide1 {
+    background: url(../images/bg1.jpg) no-repeat center/cover;
+}
+
+#slide2 {
+    background: url(../images/bg2.jpg) no-repeat center/cover;
+}
+
+#slide3 {
+    background: url(../images/bg3.jpg) no-repeat center/cover;
+}
+
+
+/* 예매하기 버튼 */
+.tkt_btn {
+    display: block;
+    width: 200px;
+    height: 60px;
+    border: 1px solid #fff;
+    border-radius: 50px;
+    text-align: center;
+    color: #fff;
+    font: bold 27px/58px Noto Sans KR;
+    position: absolute;
+    bottom: 250px;
+    left: calc(50% - 100px);
+}
+
+.tkt_btn > span {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 50px;
+}
+
+.tkt_btn:hover > span {
+    background-color: #fff;
+    opacity: 0;
+    transition: all .5s ease-out;
+}
+
+/* 비주얼 페이지 배너 영역 */
+.ban_wrap {
+    width: 330px;
+    max-width: 100%;
+    position: absolute;
+    left: 0;
+    bottom: 110px;
+}
+
+.ban_wrap > li {
+    position: relative;
+    width: 33.33%;
+    border-bottom: 1px solid #fff;
+    padding-bottom: 25px;
+}
+
+.ban_wrap a {
+    display: block;
+    color: rgba(255, 255, 255, 0.7);
+    font-size: 18px;
+}
+
+.ban_wrap > .on > a {
+    font-weight: bold;
+    color: #fff;
+    font-size: 22px;
+    transition: all .3s ease-out;
+}
+
+.ban_wrap > .on > a::before {
+    content: '';
+    display: block;
+    position: absolute;
+    bottom: -1px;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background-color: #fff;
+}
+
+/*****************************************************************/
+
+/*1. 현재공연 / 예정공연 */
+.cont_title_wrap {
+    text-align: center;
+    padding-top: 10%;
+}
+
+/* 상단 제목 */
+.cont_title {
+    padding-top: 40px;
+    position: relative;
+    font-size: 35px;
+    margin-bottom: 20px;
+}
+
+.cont_title::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 110px;
+    height: 4px;
+    background-color: #000;
+}
+
+.cont_title_sub {
+    color: #666;
+    font-size: 16px;
+}
+
+/* 컨텐츠 시작 */
+.main_content_wrap {
+    position: relative;
+    padding-top: 65px;
+}
+
+/* 포스터 */
+.main_content_poster_wrap {
+    position: relative;
+    width: 35%;
+    height: 540px;
+    float: left;
+    overflow: hidden;
+}
+
+.main_content_poster_wrap a {
+    display: block;
+}
+
+.main_content_poster {
+    height: 100%;
+    max-width: 100%;
+    opacity: 1;
+    transition: all .5s ease-out;
+}
+
+/* 유튜브 버튼 */
+.main_content_ytb {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 80px;
+    opacity: 0;
+    transition: opacity .5s ease-out;
+}
+
+.main_content_poster_wrap:hover .main_content_ytb {
+    opacity: 1;
+}
+
+.main_content_poster_wrap:hover .main_content_poster {
+    transform: scale(1.05);
+    opacity: 0.8;
+}
+
+/* 텍스트 영역 */
+.main_content_text_wrap {
+    width: 65%;
+    height: 540px;
+    padding: 40px 0 40px 100px;
+    float: left;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+/* 제목 */
+.main_content_title {
+    font-size: 33px;
+}
+
+/* 제목 멘트 */
+.main_content_sub {
+    font-size: 18px;
+    color: #444;
+    line-height: 1.2;
+    font-weight: 700;
+}
+
+/* 시놉시스 */
+.main_content_text {
+    color: #999;
+}
+
+/* 기간 장소 */
+.main_content_info_1,
+.main_content_info_2 {
+    float: left;
+    color: #333;
+    font-size: 13px;
+}
+
+.main_content_info_1 {
+    margin-right: 15px;
+    font-weight: 700;
+}
+
+/* 상세보기 */
+.main_content_btn {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    font-size: 16px;
+    width: 120px;
+    height: 35px;
+    line-height: 33px;
+    text-align: center;
+    border: 1px solid #000;
+    border-radius: 50px;
+    transition: all .3s ease-out;
+    display: block;
+    color: #000;
+}
+
+.main_content_btn > span {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 50px;
+}
+
+.main_content_btn:hover > span {
+    background-color: #000;
+    opacity: 0;
+    transition: all .5s ease-out;
+}
+
+.main_content_btn:hover {
+    color: #000;
+}
+
+@media only screen and (max-width:1280px) {
+    .inbox {
+        width: 1024px;
+    }
+
+    T .cont_title_wrap {
+        padding-top: 5%;
+    }
+}
+
+/* 1280 이하 */
+
+@media only screen and (max-width:1024px) {
+    .inbox {
+        width: 800px;
+    }
+
+    .cont_title_wrap {
+        padding-top: 5%;
+    }
+
+}
+
+/******************************************************************/
+/* 2. 관람 안내 */
+.cont2 {
+    background: url(../images/bg_seat.jpg) no-repeat center/cover;
+    color: #fff;
+}
+
+.ct2::before {
+    background-color: #fff;
+}
+
+.cont_title_sub.theme_white {
+    color: rgba(255, 255, 255, 0.7);
+}
+
+.main_info_wrap {
+    padding-top: 60px;
+}
+
+.main_info_area {
+    display: flex;
+    justify-content: space-between;
+}
+
+/* 관람안내 작은 박스 */
+.main_info_box {
+    width: 45%;
+}
+
+.main_info_title {
+    font-size: 25px;
+    height: 50px;
+}
+
+.main_info_title img {
+    width: 30px;
+    margin-right: 15px;
+    vertical-align: -6px;
+}
+
+.main_info_sect {
+    border-top: 1px solid #fff;
+    display: flex;
+    padding-top: 25px;
+    font-size: 14px;
+    font-weight: 100;
+}
+
+.main_info_list_1 {
+    width: 40%;
+    border-right: 1px solid #fff;
+}
+
+.main_info_list_1,
+.main_info_list_2 {
+    padding-left: 45px;
+}
+
+.main_info_sect li {
+    width: 100%;
+}
+
+/* 관람안내 멘트 */
+.warning_text {
+    padding: 100px 0 0 20px;
+    list-style: circle;
+    line-height: 1.6;
+}
+
+.warning_text li {
+    width: 100%;
+}
+
+.warning_text li:nth-child(5) {
+    list-style: none;
+}
+
+
+/************************ svg *************************/
+.cont1 {
+    position: relative;
+}
+
+.cont1 > svg {
+    position: absolute;
+    top: 15px;
+}
+
+.st0 {
+    fill: #999999;
+}
