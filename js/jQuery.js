@@ -36,7 +36,7 @@ $(document).ready(function (e) {
         // $(선택자).is(검사요소특성) -> 있으면 true, 없으면 false
         console.log($(".menu").is(".on"));
         if (!$(".menu").is(".on")) { //on없으면 들어감!
-            pageAction(); // 현재페이지 셋팅으로 다시 셋업!
+            setTimeout(pageAction, 300); // 현재페이지 셋팅으로 다시 셋업!
         } ///// if ////////////////////
 
     }); ///////////// 햄버거메뉴 클릭 //////////
@@ -44,13 +44,16 @@ $(document).ready(function (e) {
     $(".top_btn").click(function () {
         $("html,body").animate({
             scrollTop: 0
-        }, 800, "easeOutExpo");
+        }, 800, "easeOutSine");
 
         $(".indicator_area li").removeClass("on").first().addClass("on");
     }); //////// top 버튼 클릭 ///////
 
     $(".indicator_area a").click(function (e) {
         e.preventDefault();
+        var idx = $(this).parent().index();
+
+        pno = idx;
 
         var pid = $(this).attr("href");
         console.log(pid);
@@ -59,15 +62,14 @@ $(document).ready(function (e) {
         console.log(pgpos);
 
         $("html,body").animate({
-            scrollTop: pgpos + "px"
-        }, 800, "easeInOutSine", function () {
+            scrollTop: (winH * pno) + "px"
+        }, 800, "easeOutSine", function () {
             //페이지 도착후 변경사항
             loadAction();
         }); //// animate /////////////////
 
         // 페이지 이동과 동시에 실행
-        pageAction();
-
+        setTimeout(pageAction, 800);
         $(this).parent().addClass("on").siblings().removeClass("on");
     }); ////////// 좌측 인디케이터 클릭 /////////////
 
@@ -114,18 +116,21 @@ $(document).ready(function (e) {
 
             $("html,body").stop().animate({
                 scrollTop: (winH * pno) + "px"
-            }, 800, "easeInOutSine", function () {
+            }, 800, "easeOutSine", function () {
                 //페이지 도착후 변경사항
                 loadAction();
             }); //// animate /////////////////
 
             // 페이지 이동과 동시에 실행
-            pageAction();
+            setTimeout(pageAction, 800);
 
             $(".indicator_area a").eq(pno).parent().addClass("on").siblings().removeClass("on");
         }); ////////////////// mousewheel //////////////////////////
-
 }); ///////////제이쿼리 구역///////////
+
+
+
+
 
 /*//////////////////////////////////////////////
     함수명: pageAction
@@ -187,3 +192,9 @@ function loadAction() {
 } ////// loadAction 함수 //////////////////////////////////
 /////////////////////////////////////////////////
 /////////////////////////////////////////////////
+
+
+/*////////////////////////////////////////
+    함수명 : slideBtn
+    기능 : 
+*/ ////////////////////////////////////////

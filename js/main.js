@@ -36,4 +36,15 @@ window.addEventListener("DOMContentLoaded", function () {
         }, 1000);
     }, 3000); ////////// 슬라이드 돌아 ////////////
 
+    $(".ban_wrap a").click(function () {
+        var banNum = $(".ban_wrap a").index(this);
+        console.log("인덱스 : " + banNum);
+
+        $(".slide").css({
+            left: (-100 * banNum) + "%",
+            transition: "left .8s"
+        }); //////// css ////////////
+        $(this).parent().addClass("on").siblings().removeClass("on");
+    }); ////// ban_wrap li 버튼 ////////////
+
 }); ////////////// 로드 구역 /////////////////////////

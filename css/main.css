@@ -177,7 +177,6 @@ body {
 /* 포스터 */
 .main_content_poster_wrap {
     position: relative;
-    width: 35%;
     height: 540px;
     float: left;
     overflow: hidden;
