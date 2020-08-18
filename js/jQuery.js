@@ -44,9 +44,13 @@ $(document).ready(function (e) {
     $(".top_btn").click(function () {
         $("html,body").animate({
             scrollTop: 0
-        }, 800, "easeOutSine");
+        }, 800, "easeOutSine",function(){
+            pageAction();
+        });
 
         $(".indicator_area li").removeClass("on").first().addClass("on");
+        
+        pno = 0;
     }); //////// top 버튼 클릭 ///////
 
     $(".indicator_area a").click(function (e) {
@@ -127,8 +131,6 @@ $(document).ready(function (e) {
             $(".indicator_area a").eq(pno).parent().addClass("on").siblings().removeClass("on");
         }); ////////////////// mousewheel //////////////////////////
 }); ///////////제이쿼리 구역///////////
-
-
 
 
 
