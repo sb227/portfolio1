@@ -41,7 +41,7 @@ body {
 }
 
 /* 사이드 인디케이터 액티브 */
-.indicator_wrap.on .indicator_area.on .indicator_circle,
+.indicator_wrap.on .indicator_area li.on .indicator_circle,
 .indicator_wrap.on .indicator_area li:hover .indicator_circle {
     background-color: #000;
     border: 1px solid #000;
@@ -56,9 +56,17 @@ body {
 }
 
 /* 헤더 sns 영역 */
+
 .gnb_sns_on.on span{
     background-color: #000;
 }
+
+.gnb_sns_on.on li:hover span {
+    transform: scale(1.4);
+    opacity: 0;
+    transition: all .6s ease-out;
+}
+
 /*****************************************************************/
 /* 헤더 영역 */
 .header_wrap {

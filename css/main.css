@@ -401,8 +401,45 @@ body {
 .cont1 > svg {
     position: absolute;
     top: 15px;
+    outline: 1px solid red;
 }
 
-.st0 {
-    fill: #999999;
+.cont1 > svg .st0 {
+
+    fill: transparent;
+    stroke: #999;
+    stroke-width: 2;
+    stroke-dasharray: 200%;
+    stroke-dashoffset: 200%;
+    transition: stroke-dashoffset 5s linear;
+}
+
+.cont1 > svg.on .st0 {
+    stroke-dashoffset: 0%;
+}
+
+
+@media only screen and (max-width: 800px) {
+    
+    html,body{
+        overflow: visible;
+    }
+    
+    .page {
+        height: auto;
+    }
+
+
+    /*속박스*/
+    .inbox {
+        position: static;
+        transform: none;
+        height: auto;
+    }
+
+
+    .inbox > div > * {
+        width: 100%;
+        height: auto;
+    }
 }
