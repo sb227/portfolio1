@@ -77,7 +77,7 @@ body {
     color: #fff;
     font: bold 27px/58px Noto Sans KR;
     position: absolute;
-    bottom: 250px;
+    bottom: 25%;
     left: calc(50% - 100px);
 }
 
@@ -291,15 +291,6 @@ body {
     color: #000;
 }
 
-@media only screen and (max-width:1280px) {
-    .inbox {
-        width: 1024px;
-    }
-
-    T .cont_title_wrap {
-        padding-top: 5%;
-    }
-}
 
 /* 1280 이하 */
 
@@ -311,7 +302,9 @@ body {
     .cont_title_wrap {
         padding-top: 5%;
     }
-
+    .main_content_wrap, .main_content_poster_wrap, .main_content_poster_wrap{
+        height: 300px;
+    }
 }
 
 /******************************************************************/
@@ -417,6 +410,11 @@ body {
     stroke-dashoffset: 0%;
 }
 
+@media only screen and (max-width:1024px) {
+    .menu_wrap a {
+        font-size: 5em;
+    }
+}
 
 @media only screen and (max-width: 800px) {
     
