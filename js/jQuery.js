@@ -2,7 +2,7 @@
 
 /// 0. 모바일용 코드 
 var mob = 0; //0-모바일 아님, 1-모바일
-if ($(window).width() < 600) {
+if ($(window).width() <= 800) {
     mob = 1;
 }
 
@@ -23,7 +23,6 @@ var winH = $(window).height();
 
 $(document).ready(function (e) {
     console.log("로딩완료!제이쿼리");
-
 
     $(".header_menu_icon").click(function () {
         $(".gnb_wrap,.menu")
@@ -82,7 +81,6 @@ $(document).ready(function (e) {
             // 모바일일때 작동막기
             if (mob) return true;
 
-
             //광스크롤막기 //
             if (psts === 1) return true;
             psts = 1; // 잠금(기존 0값을 변경)
@@ -130,6 +128,8 @@ $(document).ready(function (e) {
 
             $(".indicator_area a").eq(pno).parent().addClass("on").siblings().removeClass("on");
         }); ////////////////// mousewheel //////////////////////////
+    
+    mobHeader();
 }); ///////////제이쿼리 구역///////////
 
 
@@ -186,17 +186,31 @@ function loadAction() {
 
     // 두번째 페이지일때 class="on"넣기
     // 대상: .indicator_wrap, .fixed_wrap
-    if (pno === 1) {
+    if (pno === 1 ) {
         $("#page2 svg").addClass("on");
+    } else if(pno === 2 ) {
+        $("#page3 svg").addClass("on");
     }
-
-
+    
 } ////// loadAction 함수 //////////////////////////////////
 /////////////////////////////////////////////////
 /////////////////////////////////////////////////
 
 
-/*////////////////////////////////////////
-    함수명 : slideBtn
-    기능 : 
-*/ ////////////////////////////////////////
+/*//////////////////////////////////////////////
+    함수명: mobHeader
+    기능: 모바일 시 헤더 로고 검은색
+*/ //////////////////////////////////////////////
+function mobHeader() {
+    console.log("모바일 헤더 함수");
+
+    if (mob === 1) {
+        $(".fixed_wrap").addClass("on");
+    }
+
+
+} ////// mobHeader 함수 //////////////////////////////////
+/////////////////////////////////////////////////
+/////////////////////////////////////////////////
+
+

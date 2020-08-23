@@ -27,7 +27,6 @@ window.addEventListener("DOMContentLoaded", function () {
 
         // left, transition 초기화
         setTimeout(function () {
-
             var tgli = document.getElementsByClassName("slide")[0].getElementsByTagName("li");
 
             tg.appendChild(tgli[0]);
@@ -39,12 +38,11 @@ window.addEventListener("DOMContentLoaded", function () {
     $(".ban_wrap a").click(function () {
         var banNum = $(".ban_wrap a").index(this);
         console.log("인덱스 : " + banNum);
-
         $(".slide").css({
             left: (-100 * banNum) + "%",
             transition: "left .8s"
         }); //////// css ////////////
         $(this).parent().addClass("on").siblings().removeClass("on");
     }); ////// ban_wrap li 버튼 ////////////
-
+    
 }); ////////////// 로드 구역 /////////////////////////
