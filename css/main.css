@@ -179,7 +179,7 @@ body {
 /* 컨텐츠 시작 */
 .main_content_wrap {
     position: relative;
-    padding-top: 7%;
+    padding-top: 5%;
 }
 
 /* 포스터 */
@@ -326,11 +326,8 @@ body {
         width: 850px;
     }
     .main_content_text_wrap{
-        padding-left: 60px;
+        padding-left: 10%;
         height: 380px;
-    }
-    .main_content_wrap {
-        padding-top: 5%;
     }
 }
 /******************************************************************/
