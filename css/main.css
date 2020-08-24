@@ -123,13 +123,13 @@ body {
 .ban_wrap a {
     display: block;
     color: rgba(255, 255, 255, 0.7);
-    font-size: 18px;
+    font-size: 1.125em;
 }
 
 .ban_wrap > .on > a {
     font-weight: bold;
     color: #fff;
-    font-size: 22px;
+    font-size: 1.4em;
     transition: all .3s ease-out;
 }
 
@@ -142,6 +142,15 @@ body {
     width: 100%;
     height: 2px;
     background-color: #fff;
+}
+
+@media only screen and (max-width: 800px) {
+    .ban_wrap {
+        width: 210px;
+        left: auto;
+        right: 50px;
+        bottom: 40px;
+    }
 }
 
 /*****************************************************************/
@@ -269,7 +278,7 @@ body {
     position: absolute;
     right: 0;
     bottom: 0;
-    font-size: 16px;
+    font-size: 1em;
     width: 120px;
     height: 35px;
     line-height: 33px;
@@ -306,16 +315,21 @@ body {
     .inbox {
         width: 900px;
     }
+
     .cont_title_wrap {
         padding-top: 13%;
     }
-    .main_content_poster_wrap, .main_content_text_wrap{
+
+    .main_content_poster_wrap,
+    .main_content_text_wrap {
         height: 400px;
     }
-    .main_content_info_wrap{
+
+    .main_content_info_wrap {
         display: none;
     }
-    .main_content_text_wrap{
+
+    .main_content_text_wrap {
         padding-top: 0;
         padding-bottom: 0;
     }
@@ -325,11 +339,59 @@ body {
     .inbox {
         width: 850px;
     }
-    .main_content_text_wrap{
+    .main_content_text_wrap {
         padding-left: 10%;
         height: 380px;
     }
 }
+
+@media only screen and (max-width:800px) {
+    .main_content_poster_wrap a {
+        display: none;
+    }
+
+    .main_content_poster {
+        width: 40%;
+        margin: 0 auto;
+        display: block;
+    }
+
+    .main_content_text_wrap {
+        text-align: center;
+        padding: 0;
+        margin: 5% 0;
+    }
+
+    .main_content_title {
+        margin-bottom: 3%;
+    }
+
+    .main_content_sub {
+        font-size: 1em;
+        line-height: 1.4;
+    }
+
+    .main_content_btn {
+        position: absolute;
+        right: 0;
+        bottom: 0;
+        font-size: 16px;
+        width: 120px;
+        height: 35px;
+        line-height: 33px;
+        text-align: center;
+        border: 1px solid #000;
+        border-radius: 50px;
+        transition: all .3s ease-out;
+        display: block;
+        color: #000;
+    }
+
+    .main_content_text {
+        display: none;
+    }
+}
+
 /******************************************************************/
 /* 2. 관람 안내 */
 .cont2 {
@@ -378,7 +440,7 @@ body {
     font-weight: 100;
 }
 
-.main_info_list_1{
+.main_info_list_1 {
     width: 40%;
     border-right: 1px solid #fff;
 }
@@ -410,11 +472,64 @@ body {
 @media only screen and (max-width:1280px) {
     .main_info_list_1,
     .main_info_list_2 {
-    padding-left: 5%;
+        padding-left: 5%;
     }
 }
 
+@media only screen and (max-width: 800px) {
 
+    html,
+    body {
+        overflow: visible;
+    }
+
+    .page {
+        height: auto;
+    }
+
+    /*속박스*/
+    .inbox {
+        position: static;
+        transform: none;
+        height: auto;
+    }
+
+    .inbox > div > * {
+        width: 100%;
+        height: auto;
+    }
+
+    svg,
+    .indicator_wrap,
+    .scroll_wrap {
+        display: none;
+    }
+
+    .slide {
+        position: relative;
+        height: 500px;
+    }
+
+    .tkt_btn {
+        display: none;
+    }
+
+    .main_info_area {
+        display: block;
+    }
+
+    .main_info_area > * {
+        margin: 0 auto;
+    }
+
+    .cont_title_sub span {
+        display: block;
+    }
+
+    .warning_text {
+        display: none;
+    }
+}
 
 /************************ svg *************************/
 .cont1 {
@@ -423,8 +538,7 @@ body {
 
 .cont1 > svg {
     position: absolute;
-    top: 15px;
-    outline: 1px solid red;
+    top: 10px;
 }
 
 .cont1 > svg .st0 {
@@ -441,30 +555,7 @@ body {
     stroke-dashoffset: 0;
 }
 
-@media only screen and (max-width: 800px) {
-    html,body{
-        overflow: visible;
-    }
-    
-    .page {
-        height: auto;
-    }
 
-    /*속박스*/
-    .inbox {
-        position: static;
-        transform: none;
-        height: auto;
-    }
-    .inbox > div > * {
-        width: 100%;
-        height: auto;
-    }
-    
-    svg, .indicator_wrap, .scroll_wrap{
-        display: none;
-    }
-}
 
 @media only screen and (max-width:1280px) {
     .menu_wrap a {

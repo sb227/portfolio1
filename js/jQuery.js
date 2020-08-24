@@ -43,12 +43,12 @@ $(document).ready(function (e) {
     $(".top_btn").click(function () {
         $("html,body").animate({
             scrollTop: 0
-        }, 800, "easeOutSine",function(){
+        }, 800, "easeOutSine", function () {
             pageAction();
         });
 
         $(".indicator_area li").removeClass("on").first().addClass("on");
-        
+
         pno = 0;
     }); //////// top 버튼 클릭 ///////
 
@@ -128,8 +128,9 @@ $(document).ready(function (e) {
 
             $(".indicator_area a").eq(pno).parent().addClass("on").siblings().removeClass("on");
         }); ////////////////// mousewheel //////////////////////////
-    
+
     mobHeader();
+    scrollDown();
 }); ///////////제이쿼리 구역///////////
 
 
@@ -186,12 +187,12 @@ function loadAction() {
 
     // 두번째 페이지일때 class="on"넣기
     // 대상: .indicator_wrap, .fixed_wrap
-    if (pno === 1 ) {
+    if (pno === 1) {
         $("#page2 svg").addClass("on");
-    } else if(pno === 2 ) {
+    } else if (pno === 2) {
         $("#page3 svg").addClass("on");
     }
-    
+
 } ////// loadAction 함수 //////////////////////////////////
 /////////////////////////////////////////////////
 /////////////////////////////////////////////////
@@ -207,10 +208,31 @@ function mobHeader() {
     if (mob === 1) {
         $(".fixed_wrap").addClass("on");
     }
-
-
 } ////// mobHeader 함수 //////////////////////////////////
 /////////////////////////////////////////////////
 /////////////////////////////////////////////////
 
 
+/*////////////////////////////////////////
+    함수명 : scrollDown
+    기능 : 스크롤 다운 버튼 클릭시 스크롤 다운
+*/ ////////////////////////////////////////
+function scrollDown() {
+    $(".scroll_wrap").click(function () {
+        console.log("스크롤 다운 버튼");
+        pno++
+        $("html,body").animate({
+            scrollTop: (winH * pno) + "px"
+        }, 800, "easeOutSine", function () {
+            //페이지 도착후 변경사항
+            loadAction();
+        }); //// animate /////////////////
+        
+        // 페이지 이동과 동시에 실행
+        setTimeout(pageAction, 800);
+        
+        $(".indicator_area a").eq(pno).parent().addClass("on").siblings().removeClass("on");
+    }); ////////// 좌측 인디케이터 클릭 /////////////
+} ///////// scrollDown ///////////////////////////
+///////////////////////////////////////////
+///////////////////////////////////////////

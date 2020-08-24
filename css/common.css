@@ -5,39 +5,46 @@ html,
 body {
     width: 100%;
     height: 100%;
-/*    overflow: hidden;*/
+    /*    overflow: hidden;*/
 }
 
 /*****************************************************************/
 /* 픽스영역 on 글씨 */
-.fixed_wrap.on .black{
+.fixed_wrap.on .black {
     display: block;
 }
-.fixed_wrap .black{
-    display: none;
-}
-.fixed_wrap .white{
-    display: block;
-}
-.fixed_wrap.on .white{
+
+.fixed_wrap .black {
     display: none;
 }
 
-.fixed_wrap.on a, .fixed_wrap.on{
+.fixed_wrap .white {
+    display: block;
+}
+
+.fixed_wrap.on .white {
+    display: none;
+}
+
+.fixed_wrap.on a,
+.fixed_wrap.on {
     color: #000;
 }
+
 /* 햄버거메뉴 클릭시 헤더 설정 */
 .gnb_wrap.on li {
     display: none;
 }
+
 .gnb_wrap.on .header_menu_icon {
     display: block;
     margin-left: auto;
     transform: rotate(90deg);
 }
+
 /* 햄버거 메뉴 내려오게 */
-.menu.on{
-    top:0;
+.menu.on {
+    top: 0;
 }
 
 /* 사이드 인디케이터 액티브 */
@@ -47,9 +54,10 @@ body {
     border: 1px solid #000;
 }
 
-.indicator_wrap.on .indicator_circle{
+.indicator_wrap.on .indicator_circle {
     border: 1px solid #000;
 }
+
 .indicator_wrap.on .indicator_area.on .indicator_none,
 .indicator_wrap.on .indicator_area li:hover .indicator_none {
     opacity: 1;
@@ -57,7 +65,7 @@ body {
 
 /* 헤더 sns 영역 */
 
-.gnb_sns_on.on span{
+.gnb_sns_on.on span {
     background-color: #000;
 }
 
@@ -95,10 +103,7 @@ body {
     width: 250px;
     display: flex;
     align-items: center;
-    position: absolute;
-    top: 50%;
-    right: 0;
-    transform: translateY(-50%);
+    margin-left: auto;
 }
 
 .gnb_wrap a {
@@ -153,34 +158,36 @@ body {
     opacity: 0;
     transition: all .6s ease-out;
 }
-@media only screen and (max-width: 800px) {
-    .header_wrap{
-        position: relative;
-        background-color: red;
-    }
-    .header_logo{
-        position: absolute;
-        left: 50%;
-        transform: translateX(-50%);
-        
-    }
-    .gnb_wrap{
-        width: 300px;
-        border: 1px solid lime;
-    }
-}
 
-@media only screen and (max-width:1024px){
+
+@media only screen and (max-width:1024px) {
     .header_logo {
         width: 250px;
     }
-    .gnb_wrap{
+
+    .gnb_wrap {
         width: 100px;
     }
-    .gnb_wrap>li:nth-of-type(1), .gnb_wrap>li:nth-of-type(2){
+
+    .gnb_wrap > li:nth-of-type(1),
+    .gnb_wrap > li:nth-of-type(2) {
         display: none;
     }
-} 
+}
+
+@media only screen and (max-width: 800px) {
+    .header_wrap {
+        position: static;
+        background-color: #fff;
+        height: 70px;
+        left: 0;
+        padding: 0 20px;
+    }
+
+    .header_logo {
+        padding: 0;
+    }
+}
 
 /****************************************************************/
 /* 사이드 바 영역 */
@@ -329,7 +336,7 @@ body {
 .footer_sns li {
     position: relative;
     width: 33.33%;
-    text-align: center; 
+    text-align: center;
 }
 
 .footer_sns img {
@@ -340,7 +347,7 @@ body {
     display: block;
 }
 
-.footer_sns span{
+.footer_sns span {
     position: absolute;
     left: 50%;
     top: 0;
@@ -352,28 +359,42 @@ body {
     transition: all .4s ease-out;
 }
 
-.footer_sns li:hover span{
+.footer_sns li:hover span {
     transform: translateX(-50%) scale(1.2);
-    border: 1px solid #000;    
+    border: 1px solid #000;
 }
 
-.br{
+.br {
     display: block;
 }
- 
 
 
-@media only screen and (max-width:1280px){
-    .media_br{
+
+@media only screen and (max-width:1280px) {
+    .media_br {
         display: block;
     }
 }
 
-@media only screen and (max-width:1024px){
+@media only screen and (max-width:1024px) {
     .footer_right {
         width: 250px;
     }
-} 
+}
+
+@media only screen and (max-width:800px) {
+    .cont4 {
+        height: auto;
+        padding: 3% 5%;
+    }
+    .footer_right {
+        display: none;
+    }
+    .media_br{
+        display: inline;
+    }
+}
+
 /***************************************************************/
 /* 왼쪽 샤롯데 고정 */
 .charlotte_text {
@@ -387,11 +408,12 @@ body {
     letter-spacing: 1px;
 }
 
-@media only screen and (max-width:1024px){
+@media only screen and (max-width:1024px) {
     .charlotte_text {
         display: none;
     }
-} 
+}
+
 /*****************************************************************/
 /* 햄버거 메뉴 활성화 */
 .menu {
@@ -402,7 +424,7 @@ body {
     height: 100%;
     background: url(../images/bg_menu.jpg) no-repeat center/cover;
     z-index: 99999;
-    transition:top .3s ease-out;
+    transition: top .3s ease-out;
 }
 
 .menu > inbox {

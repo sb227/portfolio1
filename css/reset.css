@@ -10,7 +10,7 @@ ul,ol{
 }
 
 
-ul::after,ol::after{
+ul::after, ol::after{
     content: "";
     display: block;
     clear: both;
