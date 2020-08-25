@@ -515,6 +515,8 @@ body {
 
     /*속박스*/
     .inbox {
+        width: 650px;
+        border: 1px solid lime;
         position: static;
         transform: none;
         height: auto;
@@ -564,6 +566,9 @@ body {
 }
 
 @media only screen and (max-width: 450px) {
+    .inbox {
+        width: 80%;
+    }
     .slide {
         height: 300px;
         margin-top: 50px;
@@ -583,6 +588,9 @@ body {
     }
     .main_info_list_1, .main_info_list_2{
         width: 50%;
+    }
+    .main_info_sect{
+        font-size: 12px;
     }
 
 }

@@ -182,7 +182,7 @@ body {
         height: 70px;
         left: 0;
         right: 0;
-        padding: 0 20px;
+        padding: 0 5%;
     }
 
     .header_logo {
@@ -195,7 +195,6 @@ body {
         height: 50px;
         left: 0;
         right: 0;
-
     }
 
     .header_logo {
@@ -404,7 +403,7 @@ body {
 @media only screen and (max-width:800px) {
     .cont4 {
         height: auto;
-        padding: 3% 5%;
+        padding: 3% 0;
     }
 
     .footer_right {
