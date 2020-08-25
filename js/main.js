@@ -35,7 +35,6 @@ window.addEventListener("DOMContentLoaded", function () {
         }, 1000);
     }, 3000); ////////// 슬라이드 돌아 ////////////
 
-    var autoT;
     $(".ban_wrap a").click(function () {
         var banNum = $(".ban_wrap a").index(this);
         console.log("인덱스 : " + banNum);

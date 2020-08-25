@@ -153,6 +153,22 @@ body {
     }
 }
 
+@media only screen and (max-width: 450px) {
+    .ban_wrap {
+        width: 150px;
+        right: 40px;
+        bottom: 30px;
+    }
+
+    .ban_wrap a {
+        font-size: 1em;
+    }
+
+    .ban_wrap > .on > a {
+        font-size: 1.125em;
+    }
+}
+
 /*****************************************************************/
 
 /*1. 현재공연 / 예정공연 */
@@ -339,6 +355,7 @@ body {
     .inbox {
         width: 850px;
     }
+
     .main_content_text_wrap {
         padding-left: 10%;
         height: 380px;
@@ -346,6 +363,10 @@ body {
 }
 
 @media only screen and (max-width:800px) {
+    .cont_title_wrap {
+        padding-top: 5%;
+    }
+
     .main_content_poster_wrap a {
         display: none;
     }
@@ -369,26 +390,30 @@ body {
     .main_content_sub {
         font-size: 1em;
         line-height: 1.4;
+        margin-bottom: 3%;
     }
 
     .main_content_btn {
-        position: absolute;
-        right: 0;
-        bottom: 0;
-        font-size: 16px;
-        width: 120px;
-        height: 35px;
-        line-height: 33px;
-        text-align: center;
-        border: 1px solid #000;
-        border-radius: 50px;
-        transition: all .3s ease-out;
-        display: block;
-        color: #000;
+        position: relative;
+        width: 25%;
+        margin: 0 auto;
     }
 
     .main_content_text {
         display: none;
+    }
+}
+
+@media only screen and (max-width:800px) {
+    .main_content_title {
+        font-size: 1.5em;
+    }
+
+    .main_content_sub {
+        font-size: 0.8em;
+    }
+    .cont_title_wrap {
+        padding-top: 10%;
     }
 }
 
@@ -422,7 +447,7 @@ body {
 }
 
 .main_info_title {
-    font-size: 25px;
+    font-size: 1.56em;
     height: 50px;
 }
 
@@ -470,6 +495,7 @@ body {
 }
 
 @media only screen and (max-width:1280px) {
+
     .main_info_list_1,
     .main_info_list_2 {
         padding-left: 5%;
@@ -508,6 +534,7 @@ body {
     .slide {
         position: relative;
         height: 500px;
+        margin-top: 70px;
     }
 
     .tkt_btn {
@@ -518,8 +545,9 @@ body {
         display: block;
     }
 
-    .main_info_area > * {
-        margin: 0 auto;
+    .main_info_box {
+        display: block;
+        margin: 5% auto;
     }
 
     .cont_title_sub span {
@@ -529,6 +557,34 @@ body {
     .warning_text {
         display: none;
     }
+
+    .main_info_wrap {
+        padding-top: 0;
+    }
+}
+
+@media only screen and (max-width: 450px) {
+    .slide {
+        height: 300px;
+        margin-top: 50px;
+    }
+
+    .main_info_box {
+        width: 70%;
+        margin: 10% auto;
+    }
+
+    .main_info_title {
+        font-size: 1.3em;
+    }
+    .main_info_title img {
+    width: 25px;
+    vertical-align: -7px;
+    }
+    .main_info_list_1, .main_info_list_2{
+        width: 50%;
+    }
+
 }
 
 /************************ svg *************************/

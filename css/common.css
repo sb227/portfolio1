@@ -177,15 +177,34 @@ body {
 
 @media only screen and (max-width: 800px) {
     .header_wrap {
-        position: static;
+        position: fixed;
         background-color: #fff;
         height: 70px;
         left: 0;
+        right: 0;
         padding: 0 20px;
     }
 
     .header_logo {
         padding: 0;
+    }
+}
+
+@media only screen and (max-width: 450px) {
+    .header_wrap {
+        height: 50px;
+        left: 0;
+        right: 0;
+
+    }
+
+    .header_logo {
+        width: 35%;
+    }
+
+    .gnb_wrap > li:nth-of-type(3) img,
+    .gnb_wrap > li:nth-of-type(4) img {
+        width: 20px;
     }
 }
 
@@ -387,11 +406,19 @@ body {
         height: auto;
         padding: 3% 5%;
     }
+
     .footer_right {
         display: none;
     }
-    .media_br{
+
+    .media_br {
         display: inline;
+    }
+}
+
+@media only screen and (max-width: 450px) {
+    .cont4 {
+        font-size: 12px;
     }
 }
 
