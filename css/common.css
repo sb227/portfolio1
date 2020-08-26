@@ -187,7 +187,6 @@ body {
 @media only screen and (max-width: 800px) {
     .header_wrap {
         position: fixed;
-        background-color: transparent;
         height: 70px;
         left: 0;
         right: 0;
@@ -500,8 +499,7 @@ body {
 .menu_wrap li:hover a::after {
     width: 100%;
 }
-
-@media only screen and (max-width: 450px) {
+@media only screen and (max-width: 800px) {
     .page.menu {
         height: 100%;
     }

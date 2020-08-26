@@ -621,7 +621,7 @@ body {
     stroke-width: 1;
     stroke-dasharray: 300;
     stroke-dashoffset: 300;
-    transition: stroke-dashoffset 1s linear;
+    transition : stroke-dashoffset 1s linear;
 }
 
 .cont1 > svg.on .st0 {
