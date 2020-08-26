@@ -185,8 +185,6 @@ function pageAction() {
 function loadAction() {
     console.log("페이지로드액션");
 
-    // 두번째 페이지일때 class="on"넣기
-    // 대상: .indicator_wrap, .fixed_wrap
     if (pno === 1) {
         $("#page2 svg").addClass("on");
     } else if (pno === 2) {
@@ -206,7 +204,7 @@ function mobHeader() {
     console.log("모바일 헤더 함수");
 
     if (mob === 1) {
-        $(".fixed_wrap").addClass("on");
+        $(".top_btn").addClass("on");
     }
 } ////// mobHeader 함수 //////////////////////////////////
 /////////////////////////////////////////////////
@@ -227,10 +225,10 @@ function scrollDown() {
             //페이지 도착후 변경사항
             loadAction();
         }); //// animate /////////////////
-        
+
         // 페이지 이동과 동시에 실행
         setTimeout(pageAction, 800);
-        
+
         $(".indicator_area a").eq(pno).parent().addClass("on").siblings().removeClass("on");
     }); ////////// 좌측 인디케이터 클릭 /////////////
 } ///////// scrollDown ///////////////////////////
