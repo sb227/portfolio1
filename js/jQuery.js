@@ -133,14 +133,14 @@ $(document).ready(function (e) {
     scrollDown();
 }); ///////////제이쿼리 구역///////////
 
-
-
 /*//////////////////////////////////////////////
     함수명: pageAction
     기능: 페이지별 액션 셋팅
 */ //////////////////////////////////////////////
 function pageAction() {
     console.log("페이지액션");
+    // 모바일일때 작동막기
+    if (mob) return true;
 
     // 두번째 페이지일때 class="on"넣기
     // 대상: .indicator_wrap, .fixed_wrap
@@ -202,7 +202,6 @@ function loadAction() {
 */ //////////////////////////////////////////////
 function mobHeader() {
     console.log("모바일 헤더 함수");
-
     if (mob === 1) {
         $(".top_btn").addClass("on");
     }
