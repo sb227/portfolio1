@@ -1,7 +1,10 @@
 // 로드구역 //
 window.addEventListener("DOMContentLoaded", function () {
     console.log("로딩 완료");
-
+    
+    var pgpg = $(window).offset().right;
+    console.log(pgpg)
+    
     var snum = 1;
 
     var slideShow = setInterval(function () {

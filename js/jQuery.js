@@ -23,7 +23,8 @@ var winH = $(window).height();
 
 $(document).ready(function (e) {
     console.log("로딩완료!제이쿼리");
-
+    
+    
     $(".header_menu_icon").click(function () {
         $(".gnb_wrap,.menu")
             .toggleClass("on");
