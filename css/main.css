@@ -210,7 +210,7 @@ body {
 /* 포스터 */
 .main_content_poster_wrap {
     position: relative;
-    height: 540px;
+    height: 50vmin;
     float: left;
     overflow: hidden;
 }
@@ -248,7 +248,7 @@ body {
 
 /* 텍스트 영역 */
 .main_content_text_wrap {
-    height: 540px;
+    height: 50vmin;
     padding: 40px 0 40px 100px;
     display: flex;
     flex-direction: column;
