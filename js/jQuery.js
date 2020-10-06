@@ -2,7 +2,7 @@
 
 /// 0. 모바일용 코드 
 var mob = 0; //0-모바일 아님, 1-모바일
-if ($(window).width() <= 800) {
+if ($(window).width() <= 500) {
     mob = 1;
 }
 
