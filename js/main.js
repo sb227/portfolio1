@@ -2,11 +2,9 @@
 window.addEventListener("DOMContentLoaded", function () {
     console.log("로딩 완료");
     
-    var pgpg = $(window).offset().right;
-    console.log(pgpg)
-    
     var snum = 1;
-
+    var restart;
+    
     var slideShow = setInterval(function () {
         console.log("슬라이드 흘러가라~!!~!");
         // 타겟 설정
@@ -47,7 +45,7 @@ window.addEventListener("DOMContentLoaded", function () {
         }); //////// css ////////////
         $(this).parent().addClass("on").siblings().removeClass("on");
         clearInterval(slideShow);
-
+        
     }); ////// ban_wrap li 버튼 ////////////
-    
 }); ////////////// 로드 구역 /////////////////////////
+

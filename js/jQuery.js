@@ -2,7 +2,7 @@
 
 /// 0. 모바일용 코드 
 var mob = 0; //0-모바일 아님, 1-모바일
-if ($(window).width() <= 500) {
+if ($(window).width() <= 800) {
     mob = 1;
 }
 
@@ -23,7 +23,6 @@ var winH = $(window).height();
 
 $(document).ready(function (e) {
     console.log("로딩완료!제이쿼리");
-    
     
     $(".header_menu_icon").click(function () {
         $(".gnb_wrap,.menu")
