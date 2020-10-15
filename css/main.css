@@ -547,6 +547,11 @@ body {
         display: none;
     }
 
+    .main_info_wrap {
+        width: 90%;
+        margin: 0 auto;
+    }
+    
     .main_info_area {
         display: block;
     }
@@ -567,6 +572,11 @@ body {
 
     .main_info_wrap {
         padding-top: 0;
+    }
+
+    .footer_left {
+        width: 90%;
+        margin: 0 auto;
     }
 }
 
